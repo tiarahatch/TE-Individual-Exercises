@@ -15,7 +15,7 @@ actual command from other text in Unix documentation.
     refer to?
 ----
 
-<type your response here>
+Home
 
 ----
 3.  A good habit to develop, especially while you're developing your skills on
@@ -24,7 +24,7 @@ actual command from other text in Unix documentation.
 ----
 
 $ pwd
-<type or copy-paste the result here>
+/Users/thatch/development/tiarahatch-java-green-material/module-1/01_Introduction_Tools/student-exercise/java-helloworld
 
 The present working directory displayed should match the directory you changed
 to in Exercise 1.  Note, the two may not match at the very beginning if you
@@ -40,7 +40,11 @@ changes directory, and the "pwd" command reflects this.
 ----
 
 $ ls -la
-<type or copy-paste the result here>
+drwxr-xr-x  5 thatch  staff   160 Jan 13 16:25 .
+drwxr-xr-x  6 thatch  staff   192 Jan 13 16:25 ..
+drwxr-xr-x  3 thatch  staff    96 Jan 13 16:25 database
+-rwxr-xr-x  1 thatch  staff  1091 Jan 13 16:25 pom.xml
+drwxr-xr-x  4 thatch  staff   128 Jan 13 16:25 src
 
 
 ----
@@ -48,14 +52,14 @@ $ ls -la
     Exercise 4 represent?
 ----
 
-<type your answer here>
+"." Current ".." Parent
 
 ----
 6.  What are the names of the files, including any dot-files, displayed in the
     directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
+., .., database, pom.xml, src 
 
 
 ----
@@ -63,7 +67,7 @@ $ ls -la
     the directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
+
 
 
 ----
@@ -95,7 +99,11 @@ $ less database/pagila.sql
 
 You are encouraged to make "less" part of your standard command line toolkit.
 
-<type or copy-paste the first five lines of either file here>
+<modelVersion>4.0.0</modelVersion>
+        <groupId>com.techelevator</groupId>
+        <artifactId>helloworld</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <packaging>jar</packaging>
 
 ----
 9.  This is good time to create a Git snapshot of your progress.  Usually,
@@ -109,7 +117,10 @@ You are encouraged to make "less" part of your standard command line toolkit.
 Did you remember to save "introduction-to-tools-exercise.txt"?
 
 $ git status
-<type or copy-paste the result here>
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
 
 $ git add -A
 <type or copy-paste the result here>
@@ -131,8 +142,8 @@ along, and then at the end.
 ----
 
 $ cd src/main/java/com/techelevator
-$ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+$ pwd
+/Users/thatch/development/tiarahatch-java-green-material/module-1/01_Introduction_Tools/student-exercise/java-helloworld/src/main/java/com/techelevator
 
 
 ----
@@ -140,7 +151,7 @@ $ <enter command to display present working directory>
     path?
 ----
 
-<type your answer here>
+Relative
 
 
 ----
@@ -149,7 +160,9 @@ $ <enter command to display present working directory>
 ----
 
 $ <enter command to list all files and directories including dot-files and dot-directories>
-<type or copy-paste the result here>
+drwxr-xr-x  3 thatch  staff   96 Jan 13 16:25 .
+drwxr-xr-x  3 thatch  staff   96 Jan 13 16:25 ..
+-rwxr-xr-x  1 thatch  staff  141 Jan 13 16:25 Helloworld.java
 
 
 ----
@@ -164,7 +177,10 @@ The "cp" parameters are the name of the source file followed by the name of the
 destination file.
 
 $ <enter command to list all files and directories in order to confirm the creation of the backup file>
-<type or copy-paste the result here>
+drwxr-xr-x  4 thatch  staff  128 Jan 14 08:40 .
+drwxr-xr-x  3 thatch  staff   96 Jan 13 16:25 ..
+-rwxr-xr-x  1 thatch  staff  141 Jan 13 16:25 Helloworld.java
+-rwxr-xr-x  1 thatch  staff  141 Jan 14 08:40 Helloworld.java.backup
 
 
 ----
@@ -178,7 +194,11 @@ The "mv" parameters are the existing name of the file followed by the new name
 of the file.
 
 $ <enter command to list all files and directories in order to confirm the renaming of the file>
-<type or copy-paste the result here>
+
+drwxr-xr-x  4 thatch  staff  128 Jan 14 08:41 .
+drwxr-xr-x  3 thatch  staff   96 Jan 13 16:25 ..
+-rwxr-xr-x  1 thatch  staff  141 Jan 13 16:25 Helloworld.java
+-rwxr-xr-x  1 thatch  staff  141 Jan 14 08:40 Helloworld.java.copy
 
 
 ----
