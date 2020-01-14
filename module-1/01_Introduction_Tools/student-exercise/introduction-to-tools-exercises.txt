@@ -123,10 +123,14 @@ Your branch is up to date with 'origin/master'.
 nothing to commit, working tree clean
 
 $ git add -A
-<type or copy-paste the result here>
+Techs-MacBook-Air-58:student-exercise thatch$ git add -A
+Techs-MacBook-Air-58:student-exercise thatch$ 
 
 $ git commit -m "Good stopping point"
-<type or copy-paste the result here>
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
 
 Note, you do not need to push this commit up to BitBucket at this time. The
 typical Git workflow is to make many small commits to your local repo while
@@ -232,8 +236,7 @@ $ rm Helloworld.java.copy
 The "rm" parameter is the name of the file to be deleted.
 
 $ <enter command to list all files and directories in order to confirm the file deletion>
-<type or copy-paste the result here>
-
+ls -la
 
 ----
 17. Change directory to the java-helloworld directory using either one of the
@@ -254,7 +257,7 @@ command line when that seems natural.
 Regardless of the option you chose, check your new location.
 
 $ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+pwd
 
 
 ----
@@ -265,7 +268,8 @@ $ <enter command to display present working directory>
 $ mkdir docs
 $ <enter the command to change directory to "docs" using a relative path>
 $ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+
+/Users/thatch/development/tiarahatch-java-green-material/module-1/01_Introduction_Tools/student-exercise/docs
 
 ----
 19. Create a new file name "readme.txt" using Visual Studio Code, and add the text
