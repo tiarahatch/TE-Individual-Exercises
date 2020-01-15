@@ -240,39 +240,75 @@ public class Exercises {
         23. Mrs. Hilt had 38 marbles. She lost 15 of them. How many marbles does
         she have left?
         */
+        int startingMarbles = 38;
+        int lostMarbles = 15;
+        int totalMarblesLeft = startingMarbles - lostMarbles;
         
+        System.out.println(totalMarblesLeft);
 
         /*
         24. Mrs. Hilt and her sister drove to a concert 78 miles away. They drove 32
         miles and then stopped for gas. How many miles did they have left to drive?
         */
+        int milesAway = 78;
+        int milesBeforeStop = 32;
+        int milesLeftToGo = milesAway - milesBeforeStop;
+        
+        System.out.println(milesLeftToGo);
 
         /*
         25. Mrs. Hilt spent 1 hour and 30 minutes shoveling snow on Saturday
         morning and 45 minutes shoveling snow on Saturday afternoon. How
         much total time did she spend shoveling snow?
         */
+        
+        double timeShoveledSaturday = 90;
+        double timeShoveledSunday = 45;
+        double totalTime = timeShoveledSaturday + timeShoveledSunday;
+        
+        System.out.println(totalTime);
 
         /*
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
-
+        double hotDogsBought = 6;
+        double costOfHotDog = 0.50;
+        double totalPaid = costOfHotDog *  hotDogsBought;
+        
+        System.out.println(totalPaid);
+        
+        
         /*
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
+        double totalCash = 0.50;
+        double costPerPencil = 0.07;
+        double pencilsThatCanBeBought = totalCash / costPerPencil;
+        
+        System.out.println(pencilsThatCanBeBought);
 
         /*
         28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
         were orange. If 20 of the butterflies were orange, how many of them
         were red?
         */
+        int totalButterflies = 33;
+        int totalOrangeButterflies = 20;
+        int totalRedButterflies = totalButterflies - totalOrangeButterflies;
+        
+        System.out.println(totalRedButterflies);
 
         /*
         29. Kate gave the clerk $1.00. Her candy cost 54 cents. How much change
         should Kate get back?
         */
+        double cashGiven = 1.00;
+        double candyCost = 0.54;
+        double totalChange = cashGiven - candyCost;
+        
+        System.out.println(totalChange);
 
         /*
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
