@@ -17,6 +17,8 @@ public class Exercises {
 		int startingNumberOfBirds = 4;
 		int flyAway = 1;
 		int remainingBirds = startingNumberOfBirds - flyAway;
+		
+		System.out.println(remainingBirds);
         /*
         2. There are 6 birds and 3 nests. How many more birds are there than
         nests?
@@ -27,7 +29,7 @@ public class Exercises {
 		int numberOfNests = 3;
 		int numberOfExtraBirds = numberOfBirds - numberOfNests;
 		
-		
+		System.out.println(numberOfExtraBirds);
         /*
         3. 3 raccoons are playing in the woods. 2 go home to eat dinner. How
         many raccoons are left in the woods?
@@ -35,13 +37,15 @@ public class Exercises {
 		int raccoonsPlaying = 3;
 		int raccoonsLeftForDinner = 2;
 		int raccoonsRemaining = raccoonsPlaying - raccoonsLeftForDinner;
+		System.out.println(raccoonsRemaining);
         /*
         4. There are 5 flowers and 3 bees. How many less bees than flowers?
         */
 		int flowers = 5;
 		int bees = 3;
 		int differenceOfFlowersAndBees = flowers - bees;
-		
+
+		System.out.println(differenceOfFlowersAndBees);
         /*
         5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
         breadcrumbs, too. How many pigeons are eating breadcrumbs now?
@@ -49,6 +53,8 @@ public class Exercises {
 		int lonelyPigeon = 1;
 		int anotherPigeon = 1;
 		int totalPigeonsEatingBreadCrumbs = lonelyPigeon + anotherPigeon;
+		
+		System.out.println(totalPigeonsEatingBreadCrumbs);
         /*
         6. 3 owls were sitting on the fence. 2 more owls joined them. How many
         owls are on the fence now?
@@ -56,13 +62,17 @@ public class Exercises {
 		int owlsSitting = 3;
 		int owlsJoined = 2;
 		int totalOwls = owlsSitting + owlsJoined;
-        /*
+        
+		System.out.println(totalOwls);
+		/*
         7. 2 beavers were working on their home. 1 went for a swim. How many
         beavers are still working on their home?
         */
 		int beaversWorking = 2;
 		int beaversSwimming = 1;
 		int beaversStillWorking = beaversWorking - beaversSwimming;
+		
+		System.out.println(beaversStillWorking);
         /*
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
@@ -70,14 +80,32 @@ public class Exercises {
 		int toucansSitting = 2;
 		int toucansFlyingIn = 1;
 		int totalToucans = toucansSitting + toucansFlyingIn;
+		
+		System.out.println(totalToucans);
         /*
         9. There are 4 squirrels in a tree with 2 nuts. How many more squirrels
         are there than nuts?
         */
+		int squirrelsInTree = 4;
+		int nuts = 2;
+		int differenceInSquirrelsAndNuts = squirrelsInTree - nuts;
 		
+		System.out.println(differenceInSquirrelsAndNuts);
         /*
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
+        
+        double numberOfQuarters = 1;
+        double numberOfDimes = 1
+        double numberOfNickles = 2
+        
+        double quarterAmount = 0.25;
+        double dimeAmount = 0.10;
+        double nickleAmount = 0.10;
+        double totalMoneyFound = (float(numberOfQuarters * quarterAmount) + (numberOfDimes * dimeAmount) + (numberOfNickles * nickleAmount));
+        
+        System.out.println(totalMoneyFound);
+        
         */
 
         /*
@@ -296,6 +324,11 @@ public class Exercises {
         50. Cristina baked 17 croissants. If she planned to serve this equally to
         her seven guests, how many will each have?
         */
+		int croissantsBaked = 17;
+		int totalGuests = 7;
+		int totalCroissantsPerGuest = croissantsBaked / totalGuests; 
+		
+		System.out.println("totalCroissantsPerGuest");
 
         /*
             CHALLENGE PROBLEMS
@@ -307,6 +340,12 @@ public class Exercises {
         Hint: Calculate the hourly rate for each painter, combine them, and then divide the total walls in feet by the combined hourly rate of the painters.
         Challenge: How many days will it take the pair to paint 623 rooms assuming they work 8 hours a day?.
         */
+		double billPaintTime = 2.15;
+		double jillPaintTime = 1.90;
+		int numberOfRooms = 5;
+		
+		
+		
 
         /*
         Create and assign variables to hold your first name, last name, and middle initial. Using concatenation,
@@ -315,6 +354,10 @@ public class Exercises {
         with a period.
         Example: "Hopper, Grace B."
         */
+		
+		
+		System.out.println("firstName, + middleInitial, + lastName.");
+	
 
         /*
         The distance between New York and Chicago is 800 miles, and the train has already travelled 537 miles.
