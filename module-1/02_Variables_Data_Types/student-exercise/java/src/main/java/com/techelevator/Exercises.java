@@ -545,7 +545,11 @@ public class Exercises {
 		double billPaintTime = 2.15;
 		double jillPaintTime = 1.90;
 		int numberOfRooms = 5;
+		double totalTimeBetweenBoth = 4.05;
 		
+		double totalPaintTime = totalTimeBetweenBoth / numberOfRooms;
+		
+		System.out.println(totalPaintTime);
 		
 		
 		
