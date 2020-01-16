@@ -62,19 +62,22 @@ public class Exercises {
 	// diff21(-10) → 31
 	// */
 	public int diff21() {
+		
+		if (n >= 21)
+			return sum
 		return 0;
 	}
 
-	// /*
-	// 5. We have a loud talking parrot. The "hour" parameter is the current hour
-	// time in the range 0..23.
-	// We are in trouble if the parrot is talking and the hour is before 7 or after
-	// 20. Return true if
-	// we are in trouble.
-	// parrotTrouble(true, 6) → true
-	// parrotTrouble(true, 7) → false
-	// parrotTrouble(false, 6) → false
-	// */
+	 /*
+	 5. We have a loud talking parrot. The "hour" parameter is the current hour
+	 time in the range 0..23.
+	 We are in trouble if the parrot is talking and the hour is before 7 or after
+	 20. Return true if
+	 we are in trouble.
+	 parrotTrouble(true, 6) → true
+	 parrotTrouble(true, 7) → false
+	 parrotTrouble(false, 6) → false
+	 */
 	public boolean parrotTrouble(boolean talking, int hour) {
 
 		if (talking && hour < 7) {
@@ -114,15 +117,14 @@ public class Exercises {
 
 	public boolean posNeg(int a, int b, boolean negative) {
 
-		if (a <= 0 && b >= 0) {
-			return false;
-		}
-		if (b <= 0 && a >= 0) {
-			return false;
-		}
 		if (b <= 0 && a <= 0) {
-			return false;
-		} else {
+			return true;
+		}
+		if ((a <= 0 && b >= 0) || (a >= 0 && b <= 0)){
+			return true;
+		}
+		
+		 else {
 			return true;
 		}
 	}
@@ -133,7 +135,15 @@ public class Exercises {
 	 * false
 	 */
 	public boolean or35(int n) {
-		return false;
+		if(n % 3 == 0) {
+			return true;
+		}
+		if (n % 5 == 0) {
+		return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	/*
@@ -192,12 +202,10 @@ public class Exercises {
 	 * loneTeen(13, 99) → true loneTeen(21, 19) → true loneTeen(13, 13) → false
 	 */
 	public boolean loneTeen(int a, int b) {
-		if ((a >= 13 && a <= 19) && (b <= 13 || b >= 19)) {
+		if ((a >= 13 && a <= 19) || (b <= 13 && b >= 19)) {
 			return true;
 		}
-		if ((b >= 13 && b <= 19) && (a <= 13 || a >= 19)) {
-			return true;
-		} else {
+		else {
 			return false;
 		}
 	}
@@ -275,13 +283,11 @@ public class Exercises {
 		if ((cigars >= 40 && cigars <= 60) && !isWeekend) {
 			return true;
 		}
-		if (cigars <= 40 && isWeekend) {
-			return false;
+		if (cigars >= 40 && isWeekend) {
+			return true;
 		}
-		if (cigars >= 60 && isWeekend) {
-			return true;
-		} else {
-			return true;
+		 else {
+			return false;
 		}
 	}
 
@@ -329,6 +335,22 @@ public class Exercises {
 	 * → 1 caughtSpeeding(65, true) → 0
 	 */
 	public int caughtSpeeding(int speed, boolean isBirthday) {
+		int value1 = no ticket;
+		int value2= small ticket;
+		int value3= big ticket;
+		
+		if (isBirthday) {
+			if (speed <= 65) {
+				return 0;
+			}
+			if (speed >= 66 && speed <= 85) {
+				return 1;
+			}
+			if (speed >= 86) {
+				return 2;
+			}
+		}
+		else {
 
 		if (speed <= 60) {
 			return 0;
@@ -338,18 +360,26 @@ public class Exercises {
 		}
 		if (speed >= 81) {
 			return 2;
-		} else {
+		} 
+		else {
 			return 0;
 		}
 	}
-
+	}
 	/*
 	 * 20. Given 2 ints, a and b, return their sum. However, sums in the range
 	 * 10..19 inclusive, are forbidden, so in that case just return 20. sortaSum(3,
 	 * 4) → 7 sortaSum(9, 4) → 20 sortaSum(10, 11) → 21
 	 */
 	public int sortaSum(int a, int b) {
-		return 0;
+		int sum = (a + b);
+				
+		if ((sum <= 19 && sum >=10) || (sum <= 19 && sum >=10)) {
+			return 20;
+		}
+		else {
+			return sum;
+		}
 	}
 
 	/*
@@ -411,8 +441,12 @@ public class Exercises {
 		if (n % 11 == 0) {
 			return true;
 		}
-		// if (n )
-		return false;
+		if (n % 11 == 1) {
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 	/*
@@ -540,18 +574,11 @@ public class Exercises {
 	 * need to be greater than a. inOrder(1, 2, 4, false) → true inOrder(1, 2, 1,
 	 * false) → false inOrder(1, 1, 2, true) → true
 	 */
-	public boolean inOrder(int a, int b, int c, boolean bOk) {
-		if (bOk == true) {
-			if (b < a) {
-				return false;
-			}
-		}
-		if (b > a && c > b) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+//	public boolean inOrder(int a, int b, int c, boolean bOk) {
+//		if ((b > a) && (c > b)) {
+//			return true;
+//		}
+//		if (bOk)
 
 	/*
 	 * 33. Given three ints, a b c, return true if they are in strict increasing
@@ -598,7 +625,7 @@ public class Exercises {
 
 		int sum = a + b + c;
 
-		if (a == 13 && b == 13 && c == 13) {
+		if (a == 13 && b == 13) {
 			return 0;
 		}
 		if (a == 13) {
