@@ -10,7 +10,14 @@ public class Exercises {
 	 firstLast6([13, 6, 1, 2, 3]) → false
 	 */
 	public boolean firstLast6(int[] nums) {
-		return false;
+		
+		boolean result = false;
+		
+		if (nums[0] == 6 || nums[nums.length-1]== 6) {
+			result = true;
+		}
+		
+		return result;
 	}
 
 	/*
@@ -21,7 +28,9 @@ public class Exercises {
 	 sameFirstLast([1, 2, 1]) → true
 	 */
 	public boolean sameFirstLast(int[] nums) {
-		return false;
+		
+		if (nums[0] == nums[nums.length -1] 
+		return result;
 	}
 
 	/*
@@ -29,7 +38,11 @@ public class Exercises {
 	 makePi() → [3, 1, 4]
 	 */
 	public int[] makePi() {
-		return new int[] {};
+		
+		int[] pi = new int [] {3, 1, 4};
+		
+		
+		return pi;
 	}
 
 	/*
@@ -40,6 +53,10 @@ public class Exercises {
 	 commonEnd([1, 2, 3], [1, 3]) → true
 	 */
 	public boolean commonEnd(int[] a, int[] b) {
+		
+		
+		
+		if (int[0] a == int[0] b)
 		return false;
 	}
 
@@ -50,7 +67,14 @@ public class Exercises {
 	 sum3([7, 0, 0]) → 7
 	 */
 	public int sum3(int[] nums) {
-		return 0;
+		
+		int sum = 0;
+		
+		
+		sum = nums[0] + nums[1] + nums[2];
+		
+		
+		return sum;
 	}
 
 	/*
@@ -105,7 +129,12 @@ public class Exercises {
 	 middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
 	 */
 	public int[] middleWay(int[] a, int[] b) {
-		return new int[] {};
+		
+		int[]results = new int[2];
+		results[0] = a[1]; 
+		results[1] = b[1];
+		
+		return results;
 	}
 
 	/*
@@ -148,7 +177,17 @@ public class Exercises {
 	 lucky13([1, 2, 4]) → false
 	 */
 	public boolean lucky13(int[] nums) {
-		return false;
+		
+		for (int i = 0; i > 0; i++)
+			if (i == 1) {
+				return false;
+			}
+			if (i == 3) {
+				return false;
+			}
+			else {
+				return true;
+			}
 	}
 
 	/*
