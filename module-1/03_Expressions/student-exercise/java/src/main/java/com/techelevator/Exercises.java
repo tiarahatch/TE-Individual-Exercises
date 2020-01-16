@@ -10,7 +10,15 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
-		return false;
+		if (weekday) {
+			return true;
+		}
+		if (vacation) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	/*
@@ -61,7 +69,10 @@ public class Exercises {
 	 diff21(-10) → 31
 	 */
 	public int diff21(int n) {
-		return 0;
+		if (n > 21) {
+			int diff21 = 21 - n;
+		}
+		
 	}
 
 	/*
@@ -73,7 +84,13 @@ public class Exercises {
 	 parrotTrouble(false, 6) → false
 	 */
 	public boolean parrotTrouble(boolean talking, int hour) {
-		return false;
+	
+		if (talking && hour < 7 && > 20) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	/*
