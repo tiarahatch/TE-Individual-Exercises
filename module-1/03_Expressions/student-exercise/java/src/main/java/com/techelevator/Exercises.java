@@ -516,6 +516,7 @@ public class Exercises {
 	 * is 2. nearTen(12) → true nearTen(17) → false nearTen(19) → true
 	 */
 	public boolean nearTen(int num) {
+		
 		return false;
 	}
 
@@ -570,14 +571,14 @@ public class Exercises {
 	 */
 	public int teaParty(int tea, int candy) {
 		
-		if (candy >= 5 && tea >= 5) {
-			return 1;
+		if (candy < 5 || tea < 5) {
+			return 0;
 		}
-		if (candy >= (tea * 2)) {
+		if (candy >= (tea * 2) || tea >= (candy * 2)) {
 			return 2;
 		}
 		else {
-			return 0;
+			return 1;
 		}
 	}
 		
@@ -607,11 +608,15 @@ public class Exercises {
 	 * need to be greater than a. inOrder(1, 2, 4, false) → true inOrder(1, 2, 1,
 	 * false) → false inOrder(1, 1, 2, true) → true
 	 */
-//	public boolean inOrder(int a, int b, int c, boolean bOk) {
-//		if ((b > a) && (c > b)) {
-//			return true;
-//		}
-//		if (bOk)
+	public boolean inOrder(int a, int b, int c, boolean bOk) {
+		if ((b > a) && (c > b) ^ bOk && c > b) {
+			return true;
+		}
+		else {
+				return false;
+		}
+		}
+	
 
 	/*
 	 * 33. Given three ints, a b c, return true if they are in strict increasing
