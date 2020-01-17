@@ -516,7 +516,7 @@ public class Exercises {
 	 * is 2. nearTen(12) → true nearTen(17) → false nearTen(19) → true
 	 */
 	public boolean nearTen(int num) {
-		if ((num * 10) + 2) {
+		if ((num % 10) < 3 || num % 10 >= 8) {
 			return true;
 		}
 		else {
