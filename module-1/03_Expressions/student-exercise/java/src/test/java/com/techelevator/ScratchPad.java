@@ -1,64 +1,64 @@
-package com.techelevator;
-
-public class ScratchPad {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-//		int age = 1;
+//package com.techelevator;
+//
+//public class ScratchPad {
+//
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
 //		
-//		//simple if statement
-//		if (age > 1) {
-//			System.out.println("Age: " + age);
+////		int age = 1;
+////		
+////		//simple if statement
+////		if (age > 1) {
+////			System.out.println("Age: " + age);
+////		}
+////		
+////		else {
+////			System.out.println("OK");
+////		}
+////		
+////		//loop written in code
+////		for (int i = 0; i<10; i++) {
+////			if (i % 2 ==0) {
+////				System.out.println("Even: " + i);	
+////			}
+////			else {
+////				System.out.println("Odd: " + i);
+////			}
+////			
+////		for (int i = 10; i >0; i --) {
+////			if (i % 2 == 0) {
+////				System.out.println("Even: " + i);	
+////			}
+////			else {
+////				System.out.println("Odd: " + i);
+////			}
+////		//Example of looping backwards & finding the sum of even numbers
+////		int sum = 0;
+////		for (int i = 10; i > 0; i --) {
+////			if (i % 2== 0) {
+////				sum = sum + i;
+////				System.out.println("Even: " + i);
+////			}
+////			else {
+////				//System.out.println("Odd: " + i);
+////			}
+////		}
+////		System.out.println("Sum: " + sum);
+////		
+//		
+//		}
+////Array Review
+//		//declares an integer array, called 'ages'
+//	// ages = 7,3,4,7,0
+//		int size = 10;
+//		
+//		//I can set my array to a size already declared
+//		int [] ages = new int [size];
+//		
+//		for (int i =0; i < ages.length; i++) {
+//			System.out.println("Element: " + i + " " + ages[i]);
 //		}
 //		
-//		else {
-//			System.out.println("OK");
-//		}
-//		
-//		//loop written in code
-//		for (int i = 0; i<10; i++) {
-//			if (i % 2 ==0) {
-//				System.out.println("Even: " + i);	
-//			}
-//			else {
-//				System.out.println("Odd: " + i);
-//			}
-//			
-//		for (int i = 10; i >0; i --) {
-//			if (i % 2 == 0) {
-//				System.out.println("Even: " + i);	
-//			}
-//			else {
-//				System.out.println("Odd: " + i);
-//			}
-//		//Example of looping backwards & finding the sum of even numbers
-//		int sum = 0;
-//		for (int i = 10; i > 0; i --) {
-//			if (i % 2== 0) {
-//				sum = sum + i;
-//				System.out.println("Even: " + i);
-//			}
-//			else {
-//				//System.out.println("Odd: " + i);
-//			}
-//		}
-//		System.out.println("Sum: " + sum);
-//		
-		
-		}
-//Array Review
-		//declares an integer array, called 'ages'
-	// ages = 7,3,4,7,0
-		int size = 10;
-		
-		//I can set my array to a size already declared
-		int [] ages = new int [size];
-		
-		for (int i =0; i < ages.length; i++) {
-			System.out.println("Element: " + i + " " + ages[i]);
-		}
-		
 //		//int [] ages = new int [5];
 //		ages[0] = 7;
 //		ages[3] = 3;
@@ -84,3 +84,19 @@ public class ScratchPad {
 //	}
 //
 //}
+		//Scanner
+		import java.util.Scanner;
+		
+		public class AreWeThereYet {
+			public static void main (String[] args) {
+				
+				try (Scanner in = new Scanner(System.in)) {
+					
+					System.out.println("Bart: Are we there yet?");
+					
+					String answer = in.nextLine();
+					
+					System.out.println("You answered with " + answer);
+				}
+			}
+		}
