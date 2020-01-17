@@ -123,18 +123,19 @@ public class Exercises {
 	 */
 
 	public boolean posNeg(int a, int b, boolean negative) {
-
-		if (b <= 0 && a >= 0) {
-			return true;
-		}
-		if (a <= 0 && b <= 0) {
+		
+		if (negative && a < 0 && b < 0) {
 			return true;
 		}
 		
-		 else {
-			return false;
+		else if (!negative && ((a < 0 && b > 0) || (a > 0 && b < 0))) {
+			return true;
+		
 		}
+		
+		return false;
 	}
+
 
 	/*
 	 * 8. Return true if the given non-negative number is a multiple of 3 or a
@@ -210,18 +211,16 @@ public class Exercises {
 	 */
 	public boolean loneTeen(int a, int b) {
 		
-			
-			if (a >= 13 && a <= 19) {
-				return true;
-			}
-			if (b >= 13 && b <= 19) {
-				return true;
-			}
-			else {
-				return false;
-			}
+		if ((a >= 13 && a <= 19) && (b >= 13 && b <= 19)) {
+			return false;
 		}
-	
+		
+		if ((a >= 13 && a <= 19) || (b >= 13 && b <= 19)) {
+			return true;
+		}
+		
+		return false;
+	}
 
 	/*
 	 * 13. Given three int values, a b c, return the largest. intMax(1, 2, 3) → 3
@@ -470,10 +469,7 @@ public class Exercises {
 	 * more20(22) → true
 	 */
 	public boolean more20(int n) {
-		if ((n % 20) + 1 == 0){
-			return true;
-		}
-		if ((n % 20) + 2 == 0){
+		if ((n % 20) == + 1 || (n % 20) == + 2){
 			return true;
 		}
 		else {
