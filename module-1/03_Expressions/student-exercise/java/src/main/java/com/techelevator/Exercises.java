@@ -516,8 +516,12 @@ public class Exercises {
 	 * is 2. nearTen(12) → true nearTen(17) → false nearTen(19) → true
 	 */
 	public boolean nearTen(int num) {
-		
+		if ((num * 10) + 2) {
+			return true;
+		}
+		else {
 		return false;
+	}
 	}
 
 	/*
@@ -609,11 +613,11 @@ public class Exercises {
 	 * false) → false inOrder(1, 1, 2, true) → true
 	 */
 	public boolean inOrder(int a, int b, int c, boolean bOk) {
-		if ((b > a) && (c > b) ^ bOk && c > b) {
+		if ((c > b) && (b > a) ^ bOk && c > b) {
 			return true;
 		}
 		else {
-				return false;
+			return false;
 		}
 		}
 	
@@ -626,8 +630,12 @@ public class Exercises {
 	 * false inOrderEqual(5, 5, 7, true) → true
 	 */
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-		
-		return false;
+		if ((a<b && b<c) ^ (equalOk && (a<=b && b<=c))) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	/*
