@@ -91,13 +91,8 @@ public class Exercises {
 	 rotateLeft3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] rotateLeft3(int[] nums) {
-		if (nums.length >= 2) {
-			int temp = nums[0];
-			for(int i = 0; i < nums.length - 1; i++)
-				nums[i] = nums[i+1];
-			nums[nums.length-1] = temp;
-		}
-		return nums;
+		
+	    return new int[] {nums[1], nums[2], nums[0]};
 	}
 	
 	/*
@@ -108,13 +103,8 @@ public class Exercises {
 	 reverse3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] reverse3(int[] nums) {
-		if (nums.length >= 2) {
-			int temp = nums[0];
-			for(int i = 0; i < nums.length - 1; i++)
-				nums[i] = nums[i+1];
-			nums[nums.length-1] = temp;
-		}
-		return new int[] {};
+		
+		 return new int[] {nums[2], nums[1], nums[0]};
 	}
 
 	/*
@@ -126,7 +116,7 @@ public class Exercises {
 	 */
 	public int[] maxEnd3(int[] nums) {
 		
-		int max = 0;
+		
 		
 		for (int i = 0; i < nums.length; i++) {
 			if (nums[0] > nums.length -1) {
