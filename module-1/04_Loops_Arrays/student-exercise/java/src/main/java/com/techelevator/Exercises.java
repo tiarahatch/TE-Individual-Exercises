@@ -125,7 +125,22 @@ public class Exercises {
 	 maxEnd3([2, 11, 3]) → [3, 3, 3]
 	 */
 	public int[] maxEnd3(int[] nums) {
-		return new int[] {};
+		
+		int max = 0;
+		
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[0] > nums.length -1) {
+				nums[0] = nums[0];
+				nums[1] = nums[0];
+				nums[2] = nums[0];
+			}
+			if (nums[2] > nums.length - 1) {
+				nums[0] = nums[2];
+				nums[1] = nums[2];
+				nums[2] = nums[2];
+			}
+		}
+		return new int[] {nums[0], nums[1], nums[2]};
 	}
 
 	/*
