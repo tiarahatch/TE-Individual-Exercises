@@ -58,11 +58,13 @@ public class Exercises {
 	 */
 	public boolean commonEnd(int[] a, int[] b) {
 		
-		
-		
-		if (int[0] a == int[0] b)
-		return false;
+		if ((a [0] == b [0]) || (a[a.length - 1]) == (b[b.length - 1])) {
+		return true;
 	}
+		else {
+			return false;
+		}
+		}
 
 	/*
 	 5. Given an array of ints length 3, return the sum of all the elements.
