@@ -91,6 +91,11 @@ public class Exercises {
 	 rotateLeft3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] rotateLeft3(int[] nums) {
+		
+		int[] rotateLeft3 = new int [] {1, 2, 3};
+		
+		for ()
+		
 		return new int[] {};
 	}
 

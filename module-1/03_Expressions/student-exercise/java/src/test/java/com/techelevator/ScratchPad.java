@@ -5,46 +5,46 @@
 //	public static void main(String[] args) {
 //		// TODO Auto-generated method stub
 //		
-////		int age = 1;
-////		
-////		//simple if statement
-////		if (age > 1) {
-////			System.out.println("Age: " + age);
-////		}
-////		
-////		else {
-////			System.out.println("OK");
-////		}
-////		
-////		//loop written in code
-////		for (int i = 0; i<10; i++) {
-////			if (i % 2 ==0) {
-////				System.out.println("Even: " + i);	
-////			}
-////			else {
-////				System.out.println("Odd: " + i);
-////			}
-////			
-////		for (int i = 10; i >0; i --) {
-////			if (i % 2 == 0) {
-////				System.out.println("Even: " + i);	
-////			}
-////			else {
-////				System.out.println("Odd: " + i);
-////			}
-////		//Example of looping backwards & finding the sum of even numbers
-////		int sum = 0;
-////		for (int i = 10; i > 0; i --) {
-////			if (i % 2== 0) {
-////				sum = sum + i;
-////				System.out.println("Even: " + i);
-////			}
-////			else {
-////				//System.out.println("Odd: " + i);
-////			}
-////		}
-////		System.out.println("Sum: " + sum);
-////		
+//		int age = 1;
+//		
+//	//simple if statement
+//		if (age > 1) {
+//			System.out.println("Age: " + age);
+//		}
+//		
+//		else {
+//			System.out.println("OK");
+//		}
+//		
+//		//loop written in code
+//		for (int i = 0; i<10; i++) {
+//			if (i % 2 ==0) {
+//				System.out.println("Even: " + i);	
+//			}
+//			else {
+//				System.out.println("Odd: " + i);
+//			}
+//			
+//		for (int i = 10; i >0; i --) {
+//			if (i % 2 == 0) {
+//				System.out.println("Even: " + i);	
+//			}
+//			else {
+//				System.out.println("Odd: " + i);
+//			}
+//	//Example of looping backwards & finding the sum of even numbers
+//		int sum = 0;
+//		for (int i = 10; i > 0; i --) {
+//			if (i % 2== 0) {
+//				sum = sum + i;
+//				System.out.println("Even: " + i);
+//			}
+//			else {
+//				//System.out.println("Odd: " + i);
+//			}
+//		}
+//		System.out.println("Sum: " + sum);
+//		
 //		
 //		}
 ////Array Review
@@ -84,19 +84,33 @@
 //	}
 //
 //}
-		//Scanner
+		//Scanner Example
 		import java.util.Scanner;
 		
 		public class AreWeThereYet {
 			public static void main (String[] args) {
 				
+				boolean there = false; 
 				try (Scanner in = new Scanner(System.in)) {
 					
-					System.out.println("Bart: Are we there yet?");
+					while(!there) {
+
+						System.out.println("Bart: Are we there yet? (Enter 'Y' of 'N'");
+						
+						String answer = in.nextLine();
+						
+						if (answer.equalsIgnoreCase("Y")) {
+							System.out.println("Yayyy");
+							there = true;
+						
+						}
+						else {
+							System.out.println("Gross");
+						}
+						System.out.println("The value of answer: " + answer);
+					}
 					
-					String answer = in.nextLine();
-					
-					System.out.println("You answered with " + answer);
+			
 				}
 			}
 		}
