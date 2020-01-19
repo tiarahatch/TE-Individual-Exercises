@@ -91,14 +91,15 @@ public class Exercises {
 	 rotateLeft3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] rotateLeft3(int[] nums) {
-		
-		int[] rotateLeft3 = new int [] {1, 2, 3};
-		
-		for ()
-		
-		return new int[] {};
+		if (nums.length >= 2) {
+			int temp = nums[0];
+			for(int i = 0; i < nums.length - 1; i++)
+				nums[i] = nums[i+1];
+			nums[nums.length-1] = temp;
+		}
+		return nums;
 	}
-
+	
 	/*
 	 7. Given an array of ints length 3, return a new array with the elements in reverse order, so 
 	 {1, 2, 3} becomes {3, 2, 1}.
@@ -107,6 +108,12 @@ public class Exercises {
 	 reverse3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] reverse3(int[] nums) {
+		if (nums.length >= 2) {
+			int temp = nums[0];
+			for(int i = 0; i < nums.length - 1; i++)
+				nums[i] = nums[i+1];
+			nums[nums.length-1] = temp;
+		}
 		return new int[] {};
 	}
 
@@ -129,7 +136,18 @@ public class Exercises {
 	 sum2([1, 1, 1, 1]) → 2
 	 */
 	public int sum2(int[] nums) {
-		return 0;
+		
+		int sum = 0;
+		
+		for (int i = 0; i < nums.length; i++){
+			sum = nums[0] + nums[1];
+			
+			if (nums.length < 2) {
+				sum = nums[0] + nums[1];
+				}
+		}
+		
+		return sum;
 	}
 
 	/*
@@ -156,9 +174,19 @@ public class Exercises {
 	 countEvens([1, 3, 5]) → 0
 	 */
 	public int countEvens(int[] nums) {
-		return 0;
-	}
+		
+		int count = 0;
+		
+		for (int i = 0; i < nums.length; i ++) {
+			if (nums[i] % 2 == 0) {
+				 count ++;
+			}
+				System.out.println("Even: " + i);
+			}
+		return count;
+		}
 
+		
 	/*
 	 12. Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 
 	 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do 
@@ -168,9 +196,20 @@ public class Exercises {
 	 sum13([1, 2, 2, 1, 13]) → 6
 	 */
 	public int sum13(int[] nums) {
-		return 0;
+		
+		int sum = 0;
+		
+		for (int i = 0; i < nums.length ; i++) {
+			if (nums[i] == 13) {
+				i ++;
+			}
+			else {
+				sum += nums[i];
+			}
+		}
+		return sum;
 	}
-
+		
 	/*
 	 13. Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
 	 has22([1, 2, 2]) → true
@@ -178,6 +217,10 @@ public class Exercises {
 	 has22([2, 1, 2]) → false
 	 */
 	public boolean has22(int[] nums) {
+		for (int i = 0; i < nums.length - 1; i++)
+			if (nums[i] == 2 && nums[i + 1] == 2) {
+				return true;
+			}
 		return false;
 	}
 	
@@ -189,17 +232,14 @@ public class Exercises {
 	 */
 	public boolean lucky13(int[] nums) {
 		
-		for (int i = 0; i > 0; i++)
-			if (i == 1) {
-				return false;
-			}
-			if (i == 3) {
-				return false;
-			}
-			else {
-				return true;
-			}
+		for (int i = 0; i < nums.length; i++)
+			
+		  	if (nums[i] == 1 || nums[i] == 3) {
+		  		return false;
+		  }
+		  return true;  
 	}
+	
 
 	/*
 	 15. Given an array of ints, return true if the sum of all the 2's in the array is exactly 8.
@@ -208,7 +248,12 @@ public class Exercises {
 	 sum28([1, 2, 3, 4]) → false
 	 */
 	public boolean sum28(int[] nums) {
-		return false;
+		
+			int sum = 0;
+			for (int i = 0; i < nums.length; i++)
+				if(nums[i] == 2) {
+					sum += 2;
+			}
+			return (sum == 8);
 	}
-
 }
