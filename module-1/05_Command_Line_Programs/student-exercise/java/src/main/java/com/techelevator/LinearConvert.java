@@ -4,27 +4,27 @@ import java.util.Scanner;
 public class LinearConvert {
 
 	public static void main(String[] args) {
-		
+		double feet, meters;
 		try (Scanner in = new Scanner(System.in)) {
 			
 			System.out.println("Enter Length: ");
 			String value = in.nextLine();
 			
-			double toFeet = Double.parseDouble(value);
-			double toMeters = Double.parseDouble(value);
+			feet = Double.parseDouble(value);
+			meters = Double.parseDouble(value);
 			
 			System.out.println("Enter (f) for feet, or (m) for meters: ");
 			String value2 = in.nextLine();
 			
 			
 			if (value2.equals("f")) {
-				double feet = value * 3.2808399d;
-				System.out.println(feet);
+				 meters = feet * 0.3048d;
+				 System.out.println(meters + "meters");
 			}
 						
 			else {
-				double meters = feet * 0.3048d;
-				System.out.println(meters);
+				feet = meters * 3.2808399;
+				System.out.println(feet + "feet");
 			}
 
 		}
