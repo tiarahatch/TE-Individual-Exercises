@@ -19,12 +19,12 @@ public class LinearConvert {
 			
 			if (value2.equals("f")) {
 				 meters = feet * 0.3048d;
-				 System.out.println(meters + "meters");
+				 System.out.println(meters + "f is " + feet + " m");
 			}
 						
 			else {
 				feet = meters * 3.2808399;
-				System.out.println(feet + "feet");
+				System.out.println(feet + "m is " + meters + "f");
 			}
 
 		}
