@@ -51,9 +51,13 @@ public class Exercises {
 		
 		String[] stringArray = new String[stringList.size()];
 		
-		
-		return stringArray;
+		for (int i = 0; i < stringList.size(); i++) {
+			stringArray[i] = stringList.get(i);
+			
+		}
+		return stringArray;  //make sure return is out of loop, or else you'll break out the loop after one runthrough
 	}
+		
 
 	/*
 	 Given an array of Strings, return an ArrayList containing the same Strings in the same order
@@ -63,7 +67,15 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+		
+		List<String> sameOrder = new ArrayList<String>();
+		
+		for (int i =0; i < stringArray.length; i++) {
+			if (stringArray[i].length() != 4) {
+				sameOrder.add(stringArray[i]);
+			}
+		}
+		return sameOrder;
 	}
 
 	/*
@@ -76,6 +88,8 @@ public class Exercises {
 	 */
 	public List<String> reverseList(List<String> stringList) {
 		return null;
+		
+		List<String> inOrder = new List
 	}
 
 	/*
