@@ -327,18 +327,22 @@ public class Exercises {
 	 doubleX("xxxxx") → true
 	 */
 	public boolean doubleX(String str) {
+		
 		for (int i=0; i < str.length() -1; i++) {
 			
-			if((str.charAt(i) == 'x') && (str.charAt(i + 1) == 'x')){
-				return true;
-			}
-			else {
+			if(str.charAt(i) == 'x') {
+			
+				if(str.charAt(i + 1) == 'x')
+					return true;
+				else 
 				return false;
 			}
-		return false;
 		}
-	}
-		
+			return false;
+			}
+
+	
+	
 
 
 	/*
@@ -348,8 +352,7 @@ public class Exercises {
 	 stringBits("Heeololeo") → "Hello"
 	 */
 	public String stringBits(String str) {
-		if ()
-		
+		return str;
 	}
 		 
 	/*
