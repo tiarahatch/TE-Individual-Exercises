@@ -236,8 +236,34 @@ public class Exercises {
 	 interleaveLists( [1, 2, 3], [4, 5, 6] )  ->  [1, 4, 2, 5, 3, 6]
 	 */
 	public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
-		return null;
+		
+		List<Integer> newList = new ArrayList<Integer>();
+//			
+//		int a = listOne.size();
+//	    int b = listTwo.size();
+//
+//	    if (a < b) { // a1 is shorter than a2
+//	        for (int i = 0; i < listOne.size(); i++) { // before k passes a1 size
+//	            newList.add(i+1, listTwo.get(i));
+//	        }
+//
+//	        for (int i = listOne.size(); i < listTwo.size(); i++) {
+//	            newList.add(listOne.size(), listTwo.get(i));
+//	        }
+//
+//	    } else if (a > b) { // a1 is longer than a2
+//	        for (int i = 1; i < listTwo.size(); i++) {
+//	            newList.add(i + 1, listTwo.get(i));
+//	        }
+//
+//	    } else { // they are equal length
+//	        for (int i = 1; i < listTwo.size(); i++) {
+//	            newList.add(i + 1, listTwo.get(i));
+//	        }
+//	    }
+	    return newList;
 	}
+
 
 	/*
 	 Given a list of Integers representing seat numbers, group them into ranges 1-10, 11-20, and 21-30.
