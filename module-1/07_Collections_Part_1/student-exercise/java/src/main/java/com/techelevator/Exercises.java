@@ -87,9 +87,23 @@ public class Exercises {
 		-> ["way", "the", "all", "jingle", "bells", "jingle", "bells", "jingle"]
 	 */
 	public List<String> reverseList(List<String> stringList) {
-		return null;
 		
-		List<String> inOrder = new List
+		List<String> allInOrder = new ArrayList<String>();
+		
+		Stack<String> inOrder = new Stack<String>();
+		
+		inOrder.addAll(stringList);
+		
+		while (inOrder.size() >0) {
+			String value = inOrder.pop();
+			allInOrder.add(value);
+		}
+		
+		
+		return allInOrder;
+		
+		
+		
 	}
 
 	/*
@@ -100,8 +114,17 @@ public class Exercises {
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
 		
+		List<Double> doublesReturned = new ArrayList<Double>();
 		
-		return null;
+		
+		
+		for (Integer number : intArray) {
+			double value = (double)(number / 2);
+			
+			doublesReturned.add(value);
+		}
+		
+		return doublesReturned;
 	}
 
 	/*
@@ -111,7 +134,16 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 64362
 	 */
 	public Integer findLargest(List<Integer> integerList) {
-		return null;
+		
+		int largestValue = 0;
+		
+		for (int i = 0; i < integerList.size(); i++) {
+			integerList.get(i);
+			if (integerList.get(i) > largestValue) {
+				largestValue = integerList.get(i);
+			}
+		}
+		return largestValue;
 	}
 
 	/*
@@ -121,7 +153,16 @@ public class Exercises {
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+		
+		
+		List<Integer> oddOnly = new ArrayList<Integer>();
+		
+		for (Integer value : integerArray) {
+			if (value % 2 != 0) {
+				oddOnly.add(value);
+			}
+		}
+		return oddOnly;
 	}
 
 	/*
@@ -132,7 +173,20 @@ public class Exercises {
 	 foundIntTwice( [9, 23, 44, 2, 88, 44], 44) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
+		
+		int count = 0;
+		
+		for (int i : integerList) {
+			if (i == intToFind) {
+				count ++;
+			}
+		}
+		if (count >= 2) {
+			return true;
+		}
+		else {
 		return false;
+	}
 	}
 
 	/*
@@ -149,7 +203,29 @@ public class Exercises {
 	 equals "1")
 	 */
 	public List<String> fizzBuzzList(Integer[] integerArray) {
-		return null;
+		
+		List<String> fizzBuzzList = new ArrayList<String>();
+		
+		String replaceFizz = "Fizz";
+		String replaceBuzz = "Buzz";
+		String replaceBoth = "FizzBuzz";
+		
+		for (Integer value : integerArray) {
+			if(value % 3 == 0 && value % 5 == 0) {
+				fizzBuzzList.add(replaceBoth);
+			}
+			else if (value % 3 == 0) {
+				fizzBuzzList.add(replaceFizz);
+			}
+			else if (value % 5 ==0) {
+				fizzBuzzList.add(replaceBuzz);
+			}
+			else {
+				
+				fizzBuzzList.add(value.toString());
+			}
+		}
+		return fizzBuzzList;
 	}
 
 	/*
