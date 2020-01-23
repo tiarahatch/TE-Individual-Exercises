@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -35,7 +36,14 @@ public class Exercises {
 	 *
 	 */
 	public String animalGroupName(String animalName) {
-		return null;
+		
+		Map<String, String> animalNames = new HashMap<String, String>();
+		
+		animalNames.add();
+		
+		
+		
+		return "unknown";
 	}
 
 	/*
