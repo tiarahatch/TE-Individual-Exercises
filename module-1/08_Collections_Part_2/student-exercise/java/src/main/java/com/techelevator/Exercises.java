@@ -1,8 +1,12 @@
 package com.techelevator;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 
 public class Exercises {
 
@@ -37,13 +41,28 @@ public class Exercises {
 	 */
 	public String animalGroupName(String animalName) {
 		
-		Map<String, String> animalNames = new HashMap<String, String>();
+		animalName = animalName.toLowerCase();
 		
-		animalNames.add();
-		
-		
-		
-		return "unknown";
+			Map<String, String> allAnimalNames = new TreeMap<String, String>();
+			
+		allAnimalNames.put("rhino", "Crash");
+		allAnimalNames.put("giraffe", "Tower");
+		allAnimalNames.put("elephant" , "Herd");
+		allAnimalNames.put("lion", "Pride");
+		allAnimalNames.put("crow", "Murder");
+		allAnimalNames.put("pigeon" , "Kit");
+		allAnimalNames.put("flamingo", "Pat");
+		allAnimalNames.put("deer" , "Herd");
+		allAnimalNames.put("dog", "Pack");
+		allAnimalNames.put("crocodile" , "Float");
+				
+		if(!allAnimalNames.containsKey(animalName)) {
+				return "unknown";
+			}
+		else {
+			return allAnimalNames.get(animalName);
+		}
+
 	}
 
 	/*
@@ -69,8 +88,25 @@ public class Exercises {
 	 *
 	 */
 	public Double isItOnSale(String itemNumber) {
-		return null;
+		
+		Double result = 0.00;
+		itemNumber = itemNumber.toUpperCase();
+		Map<String, Double> discountPercentage = new HashMap<String, Double>();
+		
+		discountPercentage.put("KITCHEN4001" , 0.20);
+		discountPercentage.put("GARAGE1070" , 0.15);
+		discountPercentage.put("LIVINGROOM" , 0.10);
+		discountPercentage.put("KITCHEN6073" , 0.40);
+		discountPercentage.put("BEDROOM3434" , 0.60);
+		discountPercentage.put("BATH0073" , 0.15);
+		
+		if(discountPercentage.containsKey(itemNumber.toUpperCase())) {
+			 result = discountPercentage.get(itemNumber.toUpperCase());
+			
+		}
+		return result;
 	}
+		
 
 	/*
 	 * Modify and return the given map as follows: if "Peter" has more than 0 money, transfer half of it to "Paul",
@@ -83,8 +119,20 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
-		return null;
-	}
+		
+		int peterMoney = peterPaul.get("Peter");
+		int paulMoney = peterPaul.get("Paul");
+		
+		if (peterMoney > 0 && paulMoney < 1000) {
+			int half = peterMoney / 2;
+			paulMoney = paulMoney+ half;
+			peterPaul.put("Paul", paulMoney);
+			peterMoney = peterMoney - half;
+			peterPaul.put("Peter", peterMoney);
+			
+			}
+		return peterPaul;
+		}
 
     /*
 	 * Modify and return the given map as follows: if "Peter" has $50 or more, AND "Paul" has $100 or more,
@@ -98,8 +146,27 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-		return null;
+		
+		
+		int peterMoney = peterPaul.get("Peter");
+		int paulMoney = peterPaul.get("Paul");
+		
+		if (peterMoney >= 5000 && paulMoney >=10000) {
+			int quarterPaul = paulMoney / 4;
+			paulMoney = paulMoney - quarterPaul;
+			int quarterPeter = peterMoney / 4;
+			peterMoney = peterMoney - quarterPeter;
+			int total = quarterPaul + quarterPeter;
+			
+			peterPaul.put("Peter", peterMoney);
+			peterPaul.put("Paul", paulMoney);
+			peterPaul.put("PeterPaulPartnership", total);
+			return peterPaul;
+		}
+		return peterPaul;
 	}
+
+	
 
 	/*
 	 * Given an array of non-empty strings, return a Map<String, String> where for every different string in the array,
@@ -110,7 +177,13 @@ public class Exercises {
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
+		
+		Map<String, String> myMap = new HashMap<String, String>();
+		
+		for (String chars  : words) {
+			myMap.put(chars.substring(0, 1), chars.substring(chars.length() -1));
+		}
+		return myMap;
 	}
 
 	/*
@@ -125,8 +198,21 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
-	}
+		
+		Map<String, Integer> myCounts = new HashMap<>();
+		
+			for (String word : words) {
+				if(myCounts.containsKey(word)) {
+					int currentCount = myCounts.get(word);
+					currentCount++;
+					myCounts.put(word,  currentCount) ;
+				} else {
+					myCounts.put(word, 1);
+				}			
+			}			
+			return myCounts;
+		}
+	
 
 	/*
 	 * Given an array of int values, return a Map<Integer, Integer> with a key for each int, with the value the
@@ -140,9 +226,22 @@ public class Exercises {
 	 *
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		return null;
+		
+		Map<Integer, Integer> myCount = new HashMap<>();
+		
+			for (int integerCheck : ints) {
+				if(myCount.containsKey(integerCheck)) {
+					int currentCount = myCount.get(integerCheck);
+					currentCount++;
+					myCount.put(integerCheck, currentCount) ;
+				} else {
+					myCount.put(integerCheck, 1);
+				}	
+			}					
+			return myCount;
 	}
-
+	
+	
 	/*
 	 * Given an array of strings, return a Map<String, Boolean> where each different string is a key and value
 	 * is true only if that string appears 2 or more times in the array.
@@ -153,8 +252,27 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
-		return null;
+		
+	Map<String, Boolean> wordMultiple = new HashMap<>();//return this map after feeding in Integer count results
+	Map<String, Integer> trueTwoOrMore = new HashMap<>();//use this map to run count
+	
+	for  (String multipleTimes : words ) {
+					
+		if(trueTwoOrMore.containsKey(multipleTimes)) {
+			int currentCount = trueTwoOrMore.get(multipleTimes);
+			currentCount++;
+			if (currentCount > 1){
+			wordMultiple.put(multipleTimes, true);
+			}else{ wordMultiple.put(multipleTimes, false);					 
+			}
+		} else { 
+			trueTwoOrMore.put(multipleTimes, 1);
+			wordMultiple.put(multipleTimes, false);					 
+		}
+		} 
+	return wordMultiple;
 	}
+
 
 	/*
 	 * Given two maps, Map<String, Integer>, merge the two into a new map, Map<String, Integer> where keys in Map2,
@@ -167,8 +285,25 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse, Map<String, Integer> remoteWarehouse) {
-		return null;
-	}
+		
+		   Map<String, Integer> inventoryMap = new HashMap<>();
+		    
+		    for (String name : mainWarehouse.keySet()){
+		        if(remoteWarehouse.containsKey(name)){
+		            inventoryMap.put(name, (mainWarehouse.get(name) + remoteWarehouse.get(name)));
+		        } else {
+		        	inventoryMap.put(name, mainWarehouse.get(name));
+		        }
+		    }
+		    for (String name : remoteWarehouse.keySet()) {
+		    	if (!(mainWarehouse.containsKey(name))) {
+		    		inventoryMap.put(name, remoteWarehouse.get(name));
+		    	}
+		    }
+		    return inventoryMap;        
+		}
+		
+	
 
 	/*
 	 * Just when you thought it was safe to get back in the water --- last2Revisited!!!!
@@ -186,9 +321,23 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> last2Revisited(String[] words) {
-		return null;
+	
+		Map<String, Integer> keyCount = new HashMap<>();
+		
+		
+		for (String key : words) {
+			if (words.length <= 2) {
+				keyCount.put(key, 0);
+				keyCount.put(key + 1, 0);
+			}
+		}
+		
+		return keyCount;
 	}
+	
 
+		
+	
 	/*
 	 Given a list of Strings, return a list that contains the distinct values. In other words, no value is to be
 	 included more than once in the returned list. (Hint: Think Set)
@@ -196,6 +345,11 @@ public class Exercises {
 	 distinctValues( ["jingle", "bells", "jingle", "bells", "jingle", "all", "the", "way"] ) -> ["jingle", "bells", "all", "the", "way"]
 	 */
 	public List<String> distinctValues(List<String> stringList) {
+		List<String> myList = new ArrayList<String>();
+		Set<String> mySet = new HashSet<String>();
+		
+		
+		
 		return null;
 	}
 
