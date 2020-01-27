@@ -2,8 +2,8 @@ package com.techelevator.shoppingcart;
 
 public class ShoppingCart {
 
-	private int totalNumberOfItems;
-	private double totalAmountOwed;
+	private int totalNumberOfItems = 0;
+	private double totalAmountOwed = 0.0;
 	
 	
 	public int getTotalNumberOfItems() {
@@ -13,8 +13,12 @@ public class ShoppingCart {
 		return totalAmountOwed;
 	}
 	public double getAveragePricePerItem() {
-		double averagePricePerItem = (double)totalAmountOwed / (double)totalNumberOfItems;
-		return averagePricePerItem;
+		if (totalNumberOfItems == 0){
+			return 0;
+		}
+		else {
+		return (double)totalAmountOwed / (double)totalNumberOfItems;
+		}
 		
 	}
 	public void addItems(int numberOfItems, double pricePerItem) {
