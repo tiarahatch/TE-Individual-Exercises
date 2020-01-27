@@ -13,9 +13,9 @@ public class ShoppingCart {
 		return totalAmountOwed;
 	}
 	public double getAveragePricePerItem() {
-//		(double)totalAmountOwed / (double)totalNumberOfItems;
-//		return averagePricePerItem;
-		return (double)totalAmountOwed / (double)totalNumberOfItems;
+		double averagePricePerItem = (double)totalAmountOwed / (double)totalNumberOfItems;
+		return averagePricePerItem;
+		
 	}
 	public void addItems(int numberOfItems, double pricePerItem) {
 		totalNumberOfItems = numberOfItems;
