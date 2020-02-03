@@ -20,6 +20,9 @@ public class DateFashion {
         } else if (you >= 8 || date >= 8) {
             getTable = 2;
         }
+        else {
+        	getTable = 1;
+        }
 
         return getTable;
     }
