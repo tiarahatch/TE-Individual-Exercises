@@ -50,16 +50,16 @@ public class AccountApp {
 		return inputFile;
 	}
 	
-	private static void splitLine(String line) {
-		String[] fields = line.split(",");
-		
-		for (int i=0; i<fields.length; i++) {
-			System.out.println(fields[i]);
-		}
+//	private static void splitLine(String line) {
+//		String[] fields = line.split(",");
+//		
+//		for (int i=0; i<fields.length; i++) {
+//			System.out.println(fields[i]);
+//		}
 		
 	}
 	
 	
 	
-}
+
 
