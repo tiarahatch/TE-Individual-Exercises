@@ -58,10 +58,10 @@ public class WordSearch {
 					String line = input.nextLine();
 					if (line.toLowerCase().contains(searchWord.toLowerCase())) {
 						System.out.println(i + line);
-					} else {
-					}
-				} else {
+				} 
+					else {
 					String line = input.nextLine();
+					}
 					if (line.contains(searchWord)) {
 						System.out.println(i  + line);
 					}
