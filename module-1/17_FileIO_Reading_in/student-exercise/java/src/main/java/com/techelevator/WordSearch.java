@@ -60,7 +60,7 @@ public class WordSearch {
 						System.out.println(i + line);
 				} 
 					else {
-					String line = input.nextLine();
+					String line1 = input.nextLine();
 					}
 					if (line.contains(searchWord)) {
 						System.out.println(i  + line);
