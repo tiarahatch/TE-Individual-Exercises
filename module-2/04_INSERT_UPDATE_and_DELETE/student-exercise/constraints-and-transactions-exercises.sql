@@ -32,7 +32,11 @@ WHERE film_id IN (274, 494, 714, 996, 1001);
 -- (5 rows affected)
 UPDATE film
 SET rating = 'G'
-WHERE film_id IN (SELECT film_id FROM film_category WHERE category_id = 17);
+WHERE film_id IN 
+        (SELECT film_id 
+        FROM film_category 
+        WHERE category_id = 17);
+
 -- 7. Add a copy of "Euclidean PI" to all the stores.
 INSERT INTO inventory (inventory_id, film_id, store_id) 
 VALUES (4581, 1001, 1);
