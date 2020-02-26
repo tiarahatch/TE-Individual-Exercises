@@ -6,7 +6,9 @@ import javax.sql.DataSource;
 
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 
 public abstract class DAOIntegrationTest {
@@ -29,6 +31,12 @@ public abstract class DAOIntegrationTest {
 		dataSource.setAutoCommit(false);
 	}
 
+	/*Clear the database before each test to ensure we aren't reliant on existing data */
+	@Before
+	public void before() {
+		JdbcTemplate jdbcTemplate = new JdbcTemplate (dataSource);
+		JdbcTemplate.update("DELETE FROM users;");
+	}
 	/* After all tests have finished running, this method will close the DataSource */
 	@AfterClass
 	public static void closeDataSource() throws SQLException {
