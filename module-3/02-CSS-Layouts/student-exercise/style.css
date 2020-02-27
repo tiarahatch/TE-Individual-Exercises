@@ -11,28 +11,72 @@
 html {
     font-size: 16px;
 }
-body{
+body {
+    margin: 8%;
+    background-color: rgba (192, 192, 192, 0.1);
+}
+#student-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-columns: 8% 1fr 1fr 1fr 8%;
     grid-template-areas:
-    ". header header . ."
-    ". main main main . "
-    ". main main . . "
-    ". main main main ."
-    ". . main . ."
-    ". footer . . .";
+    ". headline . . ."
+    ". student-quote student-quote student-picture ."
+    ". student-profile student-profile student-contact ."
+    ". student-profile student-profile . .";
     grid-gap: 20px 50px;
 }
-header {
-    grid-area: header;
+headline {
+    grid-area: headline;
+    font-size: 75px;
+    margin: 8%;
+    letter-spacing: 3px;
 }
-main {
-    grid-area: main;
+student-quote{
+    grid-area: student-quote;
 }
-footer {
-    grid-area: footer;
+student-picture {
+    grid-area: student-picture;
 }
-main .headline {
-    
-} 
+student-profile {
+    grid-area: student-profile;
+}
+student-contact {
+    grid-area: student-contact;
+}
+#student-picture img {
+    border-radius: 50%;
+    width: 100%;
+    grid-area: student-picture;
+}
+#student-quote {
+    font-size: 25px;
+    position: relative;
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8%;
+    padding-bottom: 50px;
+    line-height: 1.6;
+}
+#student-profile {
+    grid-area: student-profile;
+}
+#student-contact {
+    grid-area: student-contact;
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+}
+#experience div {
+    flex-basis: 33%;
+    padding-right: 15px;
+}
+#experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
+}
+.fas fa-database {
+    display: block;
+}
