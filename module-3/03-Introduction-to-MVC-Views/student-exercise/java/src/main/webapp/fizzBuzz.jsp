@@ -24,9 +24,29 @@
 		<li><a href="<c:out value="${ fizzBuzzRoute }" />"><c:out value="${ numberOfItems }" /></a></li>
 	</ul>
 </nav>
-
-<%--
-	REPLACE THIS COMMENT WITH YOUR UNORDERED LIST...
- --%>
+			<ul>
+			<c:forEach begin="1" end="100" var="number">
+			<c:set var="class" value=""/>
+			<c:set var="output" value="${number}"/>
+				<c:choose>
+					<c:when test="${number % 5 == 0 && number % 3 == 0}">
+						<c:set var="fizzBuzzNumber" value="fizzbuzz"/>
+						<li class="${fizzBuzzNumber}">FizzBuzz!</li>
+					</c:when>
+					<c:when test="${number % 3 ==0}">
+						<c:set var="fizzNumber" value="fizz"/>
+						<li class="${fizzNumber }">Fizz!</li>
+					</c:when>
+					<c:when test="${number % 5 == 0}">
+						<c:set var="buzzNumber" value="buzz"/>
+						<li class="${buzzNumber }">Buzz!</li>
+					</c:when>
+					<c:otherwise>
+						<li>${number}</li>
+					</c:otherwise>
+				
+				</c:choose>
+				
+			</c:forEach>
 
 <c:import url="common/footer.jsp"></c:import>

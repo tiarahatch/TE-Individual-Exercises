@@ -31,8 +31,17 @@
 	</ul>
 </nav>
 
-<%--
-	REPLACE THIS COMMENT WITH YOUR UNORDERED LIST...
- --%>
+<ul>
+			<c:set var="firstNumber" value="0"/>
+			<c:set var="secondNumber" value="1"/>
+				<c:forEach begin="1" end="25">
+					<c:set var="sum" value="${firstNumber + secondNumber}"/>
+					<li><c:out value="${sum}"/></li>
+					<c:set var="firstNumber" value="${secondNumber}"/>
+					<c:set var="secondNumber" value="${sum}"/>
+					
+				
+				</c:forEach>
+		</ul>
 
 <c:import url="common/footer.jsp"></c:import>
