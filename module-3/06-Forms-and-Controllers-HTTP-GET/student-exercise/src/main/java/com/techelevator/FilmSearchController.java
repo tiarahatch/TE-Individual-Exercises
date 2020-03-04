@@ -1,6 +1,9 @@
 package com.techelevator;
 
 import com.techelevator.dao.FilmDao;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,13 +19,24 @@ public class FilmSearchController {
 
     @Autowired
     FilmDao filmDao;
-
+    
+    @RequestMapping("/filmSearchForm")
     public String showFilmSearchForm() {
-        return null;
+        return "filmSearchForm";
     }
 
-    public String searchFilms() {
-        return null;
+    @RequestMapping("/filmSearch")
+    public String searchFilms(HttpServletRequest request) {
+    	
+    	String actorsFirstName = request.getParameter("firstName");
+		String actorsLastName = request.getParameter("lastName");/* Call the model and pass values to the jsp */
+		
+		System.out.println("FirstName="+ actorsFirstName);
+		System.out.println("LastName="+ actorsLastName);
+		
+
+
+        return "filmSearch";
     }
 
 }
