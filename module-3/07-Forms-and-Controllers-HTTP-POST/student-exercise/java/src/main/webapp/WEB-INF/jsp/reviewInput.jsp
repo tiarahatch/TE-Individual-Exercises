@@ -11,7 +11,7 @@
 	<header>
 		<h1> Review Book: <br>
 		Squirrel Cigar Party For Dummies</h1>
-		<img src="img/forDummies.png" class="centered" /><br>
+		<img src="etc/forDummies.png" class="centered" /><br>
 		</header>
 		
 	<c:url var="reviewInputURL" value="/reviewInput" />

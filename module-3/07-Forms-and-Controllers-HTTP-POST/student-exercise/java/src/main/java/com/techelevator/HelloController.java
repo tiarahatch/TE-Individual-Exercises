@@ -22,38 +22,38 @@ public class HelloController {
 	@Autowired
 	private ReviewDao reviewDao;
 	
-//	@RequestMapping("/greeting")
-//	public String displayGreeting(HttpSession session) {
-//
-//		return "greeting";
-//	}
-//	
-	@RequestMapping("/")
-	public String displayHome(HttpServletRequest request) {
-		request.setAttribute("reviews", reviewDao.getAllReviews());
+	@RequestMapping("/greeting")
+	public String displayGreeting(HttpSession session) {
+
 		return "greeting";
 	}
 	
-	@RequestMapping (path="/allReviews", method=RequestMethod.GET)
-	public String displayAllReviews(Review newReview, HttpServletRequest request) {
-		request.setAttribute("methodUsed", "POST-REDIRECT-GET");
-		List<Review>reviews = reviewDao.getAllReviews();
-		reviews.add(newReview);
-		request.setAttribute("reviews", reviews);
+	@RequestMapping(path="/", method = RequestMethod.GET)
+	public String displayHome(HttpServletRequest request) {
+		request.setAttribute("reviews", reviewDao.getAllReviews());
 		return "allReviews";
 	}
 	
-	@RequestMapping (path="/reviewInput", method=RequestMethod.GET)
-	public String reviewInputForm () {
-		return "reviewInput";//"redirect:/allReviews";
+	@RequestMapping (path="/allReviews", method=RequestMethod.POST)
+	public String displayAllReviews(Review newReview, HttpServletRequest request) {
+		List<Review>reviews = reviewDao.getAllReviews();
+		reviews.add(newReview);
+		reviewDao.save(newReview);
+		//request.setAttribute("reviews", reviews);
+		return "redirect:/";
 	}
 	
-	@RequestMapping (path="/reviewInput", method=RequestMethod.POST)
-	public String reviewInputForm2 (Review inputReview) {
-		inputReview.setDateSubmitted(LocalDateTime.now());
-		reviewDao.save(inputReview);
-		return "redirect:/allReviews";
-	}
+//	@RequestMapping (path="/reviewInput", method=RequestMethod.GET)
+//	public String reviewInputForm () {
+//		return "reviewInput";//"redirect:/allReviews";
+//	}
+	
+//	@RequestMapping (path="/allReviews", method=RequestMethod.GET)
+//	public String reviewInputForm2 (Review inputReview) {
+//		inputReview.setDateSubmitted(LocalDateTime.now());
+//		reviewDao.save(inputReview);
+//		return "redirect:/allReviews";
+//	}
 	
 //	@RequestMapping (path="/allReviews", method=RequestMethod.POST)
 //	public String displayAllReviews2(Review newReview, HttpServletRequest request) {

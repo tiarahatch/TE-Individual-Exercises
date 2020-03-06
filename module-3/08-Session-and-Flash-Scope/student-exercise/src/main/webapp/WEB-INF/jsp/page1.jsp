@@ -6,10 +6,11 @@
 	<c:param name="title" value="Favorite Color" />
 </c:import>
 
-<form method="POST">
+<form method="POST" action="page1">
 	<label>What is your favorite color?</label>
-	<input type="text" name="favoriteColor">
+	<input autofocus type="text" name="favoriteColor" value= "${favoriteColor}" id="color" class="input-field"><br>
 	<button type="submit">Next >>></button>
 </form>
 
-<c:import url="/WEB-INF/jsp/common/footer.jsp" />
+<c:import url="/WEB-INF/jsp/common/footer.jsp" /> 
+

@@ -18,7 +18,7 @@
 		<p>%{review.dateSubmitted}</p>
 		
 		<c:forEach begin="1" end="${review.rating}" step="1">
-				<img src="mvc-controllers-part2-exercises/etc/img/star.png" />
+				<img src="etc/star.png" />
 		</c:forEach>
 		<p>${review.rating}</p>
 		<p>${review.text}</p>
