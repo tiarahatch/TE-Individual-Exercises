@@ -1,47 +1,38 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:import url="common/header.jsp">
-	<c:param name="title" value="Fibonacci"></c:param>
-</c:import>
 
-<nav id="page-options">
-	<ul>
-		<c:set var="numberOfItems" value="20" />
-		<c:url var="fibonacciRoute" value="fibonacci.jsp">
-			<c:param value="${ numberOfItems }" name="max" />
-		</c:url>
-		<li>
-			<a href="<c:out value="${ fibonacciRoute }" />"><c:out value="${ numberOfItems }" /></a>
-		</li>
-
-		<c:set var="numberOfItems" value="50" />
-		<c:url var="fibonacciRoute" value="fibonacci.jsp">
-			<c:param value="${ numberOfItems }" name="max" />
-		</c:url>
-		<li>
-			<a href="<c:out value="${ fibonacciRoute }" />"><c:out value="${ numberOfItems }" /></a>
-		</li>
-
-		<c:set var="numberOfItems" value="100" />
-		<c:url var="fibonacciRoute" value="fibonacci.jsp">
-			<c:param value="${ numberOfItems }" name="max" />
-		</c:url>
-		<li>
-			<a href="<c:out value="${ fibonacciRoute }" />"><c:out value="${ numberOfItems }" /></a>
-		</li>
-	</ul>
-</nav>
-
-<ul>
-			<c:set var="firstNumber" value="0"/>
-			<c:set var="secondNumber" value="1"/>
-				<c:forEach begin="1" end="25">
-					<c:set var="sum" value="${firstNumber + secondNumber}"/>
-					<li><c:out value="${sum}"/></li>
-					<c:set var="firstNumber" value="${secondNumber}"/>
-					<c:set var="secondNumber" value="${sum}"/>
-					
-				
-				</c:forEach>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 2 - Fibonacci 25</title>
+		<style>
+			li {
+				list-style-type: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Exercise 2 - Fibonacci 25</h1>
+		<ul>
+			 <c:set var = "fib1" value = "${0}" />
+			 <c:set var = "fib2" value = "${1}" />
+			 <c:forEach begin="1" end="25" var="nums">
+			  <c:choose>
+			  <c:when test="${nums<= 1}">
+			  <li class="nums">
+			  <c:out value="${nums}"/>
+			  
+			  <ul>
+			  </li>
+			  </c:when>
+			  <c:otherwise>
+			  <c:set var = "newFib" value = "${fib1 + fib2}" />
+			  <c:set var = "fib1" value = "${fib2}" />
+			  <c:set var = "fib2" value = "${newFib}" />
+			  <li class="nums"><c:out value="${fib1 + newFib}"/></li>
+			   </c:otherwise>
+			  </c:choose>
+			  </c:forEach>
 		</ul>
-
+	</body>
+</html>
 <c:import url="common/footer.jsp"></c:import>

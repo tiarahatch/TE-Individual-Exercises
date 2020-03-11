@@ -6,7 +6,7 @@
 	<c:param name="title" value="Favorite Color" />
 </c:import>
 
-<form method="POST" action="page1">
+<form method="POST" action="Page1">
 	<label>What is your favorite color?</label>
 	<input autofocus type="text" name="favoriteColor" value= "${favoriteColor}" id="color" class="input-field"><br>
 	<button type="submit">Next >>></button>

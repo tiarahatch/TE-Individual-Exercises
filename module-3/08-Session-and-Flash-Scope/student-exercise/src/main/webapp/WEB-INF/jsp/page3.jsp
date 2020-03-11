@@ -6,7 +6,7 @@
 	<c:param name="title" value="Favorite Season" />
 </c:import>
 
-<form method =  "POST" action= "page3">
+<form method =  "POST" action= "Page3">
 <label>What is your favorite season?</label>
 	<ul>
 	<li class="radio"><input name="favoriteSeason" value="Spring"  type="radio"><label for= "Spring">Spring</label></li>

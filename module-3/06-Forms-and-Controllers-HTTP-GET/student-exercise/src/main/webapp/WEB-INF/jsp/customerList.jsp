@@ -32,12 +32,14 @@
 <table class="table">
 <tr>
 <th>Name</th>
+<th>Email</th>
+<th>Active</th>
 </tr>
 <c:forEach items="${customers}" var="customer">
 <tr>
-    <td> 
-    ${customer.lastName} ${customer.email}
-    </td>
+    <td>  ${customer.lastName} ${customer.firstName}</td>
+    <td> ${customer.email}</td>
+    <td> ${customer.active}</td>
 </tr>
 </c:forEach>
 </table>

@@ -18,12 +18,10 @@ public class FexEd implements IDeliveryDriver {
 	public double calculateRate(int distance, double weight) {
 		double flatRate = 20.00;
 		if (distance > 500) {
-			double rate = flatRate + 5.00;
-			return rate;
+			 flatRate += 5.00;
 		}
 		else if (weight > 48) {
-			double rate = flatRate + 3.00;
-			return rate;
+			 flatRate += 3.00;
 		}
 		return flatRate;
 	}

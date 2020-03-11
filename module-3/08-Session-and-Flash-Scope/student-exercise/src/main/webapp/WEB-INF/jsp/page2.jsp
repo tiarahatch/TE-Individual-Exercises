@@ -7,7 +7,7 @@
 	<c:param name="title" value="Favorite Food" />
 </c:import>
 
-<form method="POST" action="page2">
+<form method="POST" action="Page2">
 	<label>What is your favorite food?</label>
 	<input autofocus type="text" name="favoriteFood" value= "${favoriteFood}" id="food" class="input-field"><br>
 	<button type="submit">Next >>></button>

@@ -10,7 +10,7 @@
 			<label for="lastName">Last Name: </label>
 			<input type="text" id="lastName" name="lastName" />
 			
-			<input type="submit" value="Submit" />
+			<input type="submit" value="Search Actors" />
 
 </form>
 

@@ -20,15 +20,15 @@ public class Car implements Vehicle {
 		return this.type;
 	}
 
-	
-	double toll = 0.0;
 	public double calculateToll(int distance) {
-		toll = distance * 0.020;
+		double toll = 0.0;
+
 		if(hasTrailer) {
-		return toll + 1.00;
+			toll = distance * 0.020;
 		}
 		else {
-			return toll;
+			toll = (distance * 0.020) + 1.00;
 		}
+		return toll;
 	}
 }
