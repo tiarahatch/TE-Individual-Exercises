@@ -16,23 +16,15 @@ public class CustomerSearchController {
 
     @Autowired
     private CustomerDao customerDao;
-    
-    @RequestMapping("/customerSearchForm")
-    public String showCustomerSearchForm() {
-    	return "customerList";
-    }
-    
-    @RequestMapping("/searchCustomers")
-    public String searchCustomers (HttpServletRequest request) {
-    	
-    	String customersFirstName = request.getParameter("firstName");
-		String customersLastName = request.getParameter("lastName");/* Call the model and pass values to the jsp */
-		
-		System.out.println("FirstName="+ customersFirstName);
-		System.out.println("LastName="+ customersLastName);
-		
-		request.setAttribute("customers", customerDao.searchAndSortCustomers(customersFirstName, customersLastName));
-		
-		return "customerList";
+	
+	@RequestMapping("/customerList")
+	public String showFilmSearchForm() {
+	    return "customerList";
 	}
-    }
+
+	@RequestMapping("/customerListResults")
+	public String searchCustomers(HttpServletRequest request) {
+	    request.setAttribute("customers", customerDao.searchAndSortCustomers(request.getParameter("search"), request.getParameter("sort")));
+	    return "customerList";
+	}
+}
