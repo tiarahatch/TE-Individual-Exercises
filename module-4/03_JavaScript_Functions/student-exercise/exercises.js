@@ -40,7 +40,9 @@ function isSummer(month, day = 1, hemisphere = 'northern') {
  * @param {boolean} [recommendation=false] does the student have a recommendation
  * @returns {boolean} true if they are admitted
  */
-
+function isAdmitted(gpa, satScore = 0, recommendation = false) {
+  return !!(gpa > 4.0 || satScore > 1300 || (gpa > 3.0 && recommendation) || (satScore > 1200 && recommendation));
+}
 /**
  * Write a function called useParameterToFilterArray so that it takes an anonymous
  * function and uses that in `unfilteredArray` filter function. Return the result.
