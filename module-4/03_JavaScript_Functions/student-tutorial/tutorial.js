@@ -1,6 +1,6 @@
 /**
  * Create a function called turnOn.
- *
+ 
  * This function should return the boolean true.
  *
  * @returns {number} 1
