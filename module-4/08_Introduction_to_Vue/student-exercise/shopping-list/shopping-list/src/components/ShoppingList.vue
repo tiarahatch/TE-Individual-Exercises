@@ -2,14 +2,14 @@
     <div class = "shopping-list">
         <h1>Shopping List</h1>
         <ul>
-            <li>Oatmeal</li>
+            <li class="completed">Oatmeal</li>
             <li>Milk</li>
             <li>Bananas</li>
-            <li>Strawberries</li>
+            <li class="completed">Strawberries</li>
             <li>Lunch Meat</li>
             <li>Bread</li>
             <li>Grapes</li>
-            <li>Steak</li>
+            <li class="completed">Steak</li>
             <li>Salad</li>
         </ul>
     </div>
