@@ -42,10 +42,16 @@ displayGroceries();
 
 
 /**
- * This function will be called when the button is clicked. You will need to get a reference
+ * This function will be called wh4en the button is clicked. You will need to get a reference
  * to every list item and add the class completed to each one
  */
-function markCompleted() {}
+function markCompleted() {
+  const items = document.querySelectorAll('li');
+  items.forEach((item) => {
+    item.classList.add('completed');
+  });
+}
+
 
 setPageTitle();
 
@@ -57,3 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = document.querySelector('.btn');
   button.addEventListener('click', markCompleted);
 });
+
+
+
