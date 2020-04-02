@@ -3,6 +3,7 @@
         <h1>My Daily Routine</h1>
         <ul>
             <li v-for="todo in todos" v-bind:key="todo.task" v-bind:class="{'todo-completed': todo.completed}">
+                <input type="checkbox"/>
                 {{todo.task}} <i class="far fa-check-circle" v-bind:class="{completed: todo.completed}"></i>
             </li>
         </ul>
